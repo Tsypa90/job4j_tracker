@@ -1,0 +1,25 @@
+package ru.job4j.oop;
+
+import java.net.SocketTimeoutException;
+import java.security.spec.RSAOtherPrimeInfo;
+import java.sql.SQLOutput;
+
+public class Student {
+    public void song() {
+        System.out.println("I believe I can fly");
+    }
+
+    public void music() {
+        System.out.println("Tra tra tra");
+    }
+
+    public static void main(String[] args) {
+        Student petya = new Student();
+        petya.music();
+        petya.music();
+        petya.music();
+        petya.song();
+        petya.song();
+        petya.song();
+    }
+}
