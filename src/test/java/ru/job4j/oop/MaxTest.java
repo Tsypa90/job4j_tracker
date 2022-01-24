@@ -23,7 +23,7 @@ public class MaxTest extends TestCase {
 
     public void testMaxFour() {
         Max max = new Max();
-        int result = Max.max(1, 5, 6 , 8);
+        int result = Max.max(1, 5, 6, 8);
         int expected = 8;
         Assert.assertEquals(result,
                 expected);
