@@ -3,10 +3,10 @@ package ru.job4j.oop;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
-
 import static junit.framework.Assert.assertEquals;
 
 public class PointTest {
+
     @Test
     public void testDistanceWhen00To02Then2() {
         Point a = new Point(0, 0);
@@ -15,6 +15,7 @@ public class PointTest {
         double expected = 2;
         assertEquals(rsl, expected);
     }
+
     @Test
     public void testDistanceWhen24To28Then4() {
         Point a = new Point(2, 4);
@@ -23,6 +24,7 @@ public class PointTest {
         double expected = 4;
         assertEquals(rsl, expected);
     }
+
     @Test
     public void testDistanceWhen21To52Then3() {
         Point a = new Point(2, 1);
@@ -31,6 +33,7 @@ public class PointTest {
         double expected = 3.16;
         assertEquals(rsl, expected, 0.01);
     }
+
     @Test
     public void testDistanceWhen000To122Then3() {
         Point a = new Point(0, 0, 0);
@@ -39,6 +42,7 @@ public class PointTest {
         double expected = 3;
         assertEquals(rsl, expected);
     }
+
     @Test
     public void testDistanceWhen215To525Then3() {
         Point a = new Point(2, 1, 5);
