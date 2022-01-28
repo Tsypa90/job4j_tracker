@@ -1,5 +1,7 @@
 package ru.job4j.oop;
 
+import ru.job4j.inheritance.Doctor;
+
 public class Surgeon extends Doctor {
     private String diagnosis;
 

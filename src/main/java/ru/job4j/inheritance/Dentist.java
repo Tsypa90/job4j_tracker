@@ -1,4 +1,4 @@
-package ru.job4j.oop;
+package ru.job4j.inheritance;
 
 public class Dentist extends Doctor {
     private String teath;
