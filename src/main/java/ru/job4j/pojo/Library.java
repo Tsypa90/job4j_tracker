@@ -6,23 +6,26 @@ public class Library {
         Book vlastelinKoletc = new Book("Властелин колец", 1560);
         Book voinaIMir = new Book("Война и мир", 3591);
         Book cleanCode =  new Book("Clean code", 464);
-        String[] lib = new String[4];
-        lib[0] = azbuka.getName();
-        lib[1] = vlastelinKoletc.getName();
-        lib[2] = voinaIMir.getName();
-        lib[3] = cleanCode.getName();
+        Book[] lib = new Book[4];
+        lib[0] = azbuka;
+        lib[1] = vlastelinKoletc;
+        lib[2] = voinaIMir;
+        lib[3] = cleanCode;
         for (int index = 0; index < lib.length; index++) {
-            System.out.println(lib[index]);
+            Book bk = lib[index];
+            System.out.println(bk.getName() + " - " + bk.getPages());
         }
-        String temp = lib[0];
+        Book temp = lib[0];
         lib[0] = lib[2];
         lib[2] = temp;
         for (int index = 0; index < lib.length; index++) {
-            System.out.println(lib[index]);
+            Book bk = lib[index];
+            System.out.println(bk.getName() + " - " + bk.getPages());
         }
         for (int index = 0; index < lib.length; index++) {
-            if (lib[index] == "Clean code") {
-                System.out.println(lib[index]);
+            Book bk = lib[index];
+            if (bk.getName() == "Clean code") {
+                System.out.println(bk.getName() + " - " + bk.getPages());
             }
         }
     }
