@@ -18,7 +18,6 @@ public class Matches {
                 System.out.println("Спичек осталось: " + count);
             } else {
                 System.out.println("Так ходить нельзя. Повторите свой ход.");
-                turn = !turn;
             }
         }
         if (!turn) {
