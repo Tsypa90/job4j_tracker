@@ -5,6 +5,7 @@ public class FindEl {
         int rsl = -1;
         for (int index = 0; index < value.length; index++) {
             if (key == value[index]) {
+                rsl = index;
                 return rsl;
             }
         }
