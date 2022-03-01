@@ -10,5 +10,6 @@ public class UsageArrayList {
         names.add("Stepan");
         for (String name : names) {
             System.out.println(name);
-        }    }
+        }
+    }
 }
