@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 public class PhoneDictionaryTest {
 
@@ -28,6 +27,6 @@ public class PhoneDictionaryTest {
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
         ArrayList<Person> persons = phones.find("Petrov");
-        assertThat(persons.isEmpty(), is(true));
+        assertTrue(persons.isEmpty());
     }
 }
