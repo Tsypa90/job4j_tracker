@@ -8,8 +8,8 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class ItemDescByNameTest{
-@Test
+public class ItemDescByNameTest {
+    @Test
     public void testCompare() {
     List<Item> items = new ArrayList<>();
     items.add(new Item("Evgeniy"));
