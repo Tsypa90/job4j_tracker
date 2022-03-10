@@ -23,6 +23,7 @@ public class JobTest {
                 new Job("Pavel", 2)));
         assertThat(jobs, is(expected));
     }
+
     @Test
     public void whenComparatorDescByName() {
         List<Job> jobs = new ArrayList<>();
@@ -38,6 +39,7 @@ public class JobTest {
                 new Job("Andrey", 1)));
         assertThat(jobs, is(expected));
     }
+
     @Test
     public void whenComparatorSortByPriority() {
         List<Job> jobs = new ArrayList<>();
@@ -53,6 +55,7 @@ public class JobTest {
                 new Job("Boris", 4)));
         assertThat(jobs, is(expected));
     }
+
     @Test
     public void whenComparatorDesctByPriority() {
         List<Job> jobs = new ArrayList<>();
@@ -68,6 +71,7 @@ public class JobTest {
                 new Job("Andrey", 1)));
         assertThat(jobs, is(expected));
     }
+
     @Test
     public void whenCompatorByNameAndPrority() {
         Comparator<Job> cmpNamePriority = new SortByNameJob().thenComparing(new SortByPriorityJob());
@@ -77,6 +81,7 @@ public class JobTest {
         );
         assertThat(rsl, greaterThan(0));
     }
+
     @Test
     public void whenCompatorByDescNameAndPrority() {
         Comparator<Job> cmpNamePriority = new DescByNameJob().thenComparing(new SortByPriorityJob());
@@ -86,6 +91,7 @@ public class JobTest {
         );
         assertThat(rsl, lessThan(0));
     }
+
     @Test
     public void whenCompatorByNameAndDescPrority() {
         Comparator<Job> cmpNamePriority = new DescByNameJob().thenComparing(new SortByPriorityJob());
