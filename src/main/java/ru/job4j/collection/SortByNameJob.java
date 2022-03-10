@@ -9,4 +9,3 @@ public class SortByNameJob implements Comparator<Job> {
         return job.getName().compareTo(t1.getName());
     }
 }
-

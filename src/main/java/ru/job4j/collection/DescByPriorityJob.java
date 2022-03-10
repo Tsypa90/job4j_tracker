@@ -8,4 +8,3 @@ public class DescByPriorityJob implements Comparator<Job> {
         return Integer.compare(t1.getPriority(), job.getPriority());
     }
 }
-

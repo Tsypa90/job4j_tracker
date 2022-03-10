@@ -8,4 +8,3 @@ public class SortByPriorityJob implements Comparator<Job> {
         return Integer.compare(job.getPriority(), t1.getPriority());
     }
 }
-
