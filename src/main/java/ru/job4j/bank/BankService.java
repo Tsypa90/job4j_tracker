@@ -40,6 +40,7 @@ public class BankService {
             for (Account account : users.get(user)) {
                 if (account.getRequisite().equals(requisite)) {
                     result = account;
+                    break;
                 }
             }
         }
@@ -51,7 +52,7 @@ public class BankService {
         Account accountSrc = findByRequisite(srcPassport, srcRequisite);
         Account accountDest = findByRequisite(destPassport, destRequisite);
         boolean rsl = false;
-        if (accountSrc != null || accountSrc.getBalance() >= amount) {
+        if (accountSrc != null && accountDest != null && accountSrc.getBalance() >= amount) {
             accountSrc.setBalance(accountSrc.getBalance() - amount);
             accountDest.setBalance(accountDest.getBalance() + amount);
             rsl = true;
