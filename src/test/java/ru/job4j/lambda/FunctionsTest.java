@@ -8,7 +8,7 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class FunctionsTest{
+public class FunctionsTest {
     @Test
     public void whenLinearFunctionThenLinearResults() {
         List<Double> result = Functions.diapason(5, 8, x -> 2 * x + 1);
