@@ -23,7 +23,6 @@ public class College {
     }
 
     public Optional<Subject> findBySubjectName(String account, String name) {
-        //Subject rsl = null;
         Optional<Subject> rsl = Optional.empty();
         Optional<Student> s = findByAccount(account);
         if (s.isPresent()) {
