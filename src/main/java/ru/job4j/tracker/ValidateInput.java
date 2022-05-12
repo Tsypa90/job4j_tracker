@@ -1,17 +1,28 @@
 package ru.job4j.tracker;
 
 public class ValidateInput implements Input {
-    private final Output out;
+    private Output out;
     private final Input in;
 
-    public ValidateInput(Output out, Input input) {
-        this.out = out;
+    public ValidateInput(Input input, Output out) {
         this.in = input;
+        this.out = out;
     }
 
     @Override
     public String askStr(String question) {
-        return in.askStr(question);
+        String value = null;
+        do {
+            try {
+                value = in.askStr(question);
+                if (value.isEmpty()) {
+                    out.println("Please enter validate data again.");
+                }
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            }
+        } while (value.isEmpty());
+        return value;
     }
 
     @Override
