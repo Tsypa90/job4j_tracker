@@ -47,7 +47,7 @@ public class SqlTracker implements Store, AutoCloseable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return item;
     }
 
     @Override
