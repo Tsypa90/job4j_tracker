@@ -92,6 +92,10 @@ public class SqlTracker implements Store, AutoCloseable {
     }
 
     @Override
+    public void deleteAll() {
+    }
+
+    @Override
     public List<Item> findAll() {
         List<Item> items = new ArrayList<>();
         try (PreparedStatement statement = cn.prepareStatement("select * from items")) {

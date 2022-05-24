@@ -13,7 +13,7 @@ public class MemTracker implements Store {
         return item;
     }
 
-        public List<Item> findAll() {
+    public List<Item> findAll() {
         return List.copyOf(items);
     }
 
@@ -60,5 +60,10 @@ public class MemTracker implements Store {
             items.remove(index);
         }
         return rsl;
+    }
+
+    @Override
+    public void deleteAll() {
+        items.clear();
     }
 }
