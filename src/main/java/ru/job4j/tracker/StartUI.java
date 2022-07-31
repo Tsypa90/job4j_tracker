@@ -34,7 +34,7 @@ public class StartUI {
     public static void main(String[] args) throws SQLException {
         Output output = new ConsoleOutput();
         Input input = new ValidateInput(new ConsoleInput(), output);
-        MemTracker tracker = new MemTracker();
+        HbmTracker tracker = new HbmTracker();
             List<UserAction> actions = List.of(
                     new CreateAction(output),
                     new CreateManyAction(output),
