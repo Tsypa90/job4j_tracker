@@ -20,7 +20,7 @@ public class CreateManyAction implements UserAction {
         String name = input.askStr("Enter name: ");
         int amount = input.askInt("Enter amount: ");
         for (int i = 1; i <= amount; i++) {
-            store.add(new Item(name + i));
+            store.add(new Item(name + i, "desc"));
         }
         out.println("Заявки добавлены");
         return true;
