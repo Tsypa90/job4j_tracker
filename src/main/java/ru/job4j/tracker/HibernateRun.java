@@ -21,7 +21,6 @@ public class HibernateRun {
             System.out.println(item);
             Item rsl = findById(item.getId(), sf);
             System.out.println(rsl);
-            delete(rsl.getId(), sf);
             List<Item> list = findAll(sf);
             for (Item it : list) {
                 System.out.println(it);

@@ -20,6 +20,10 @@ public class Item {
     public Item() {
     }
 
+    public Item(String name) {
+        this.name = name;
+    }
+
     public Item(String name, String description) {
         this.name = name;
         this.description = description;
