@@ -6,7 +6,6 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class HbmTracker implements Store, AutoCloseable {
@@ -15,7 +14,7 @@ public class HbmTracker implements Store, AutoCloseable {
     private final SessionFactory sf = new MetadataSources(registry).buildMetadata().buildSessionFactory();
 
     @Override
-    public Item add(Item item) throws SQLException {
+    public Item add(Item item) {
         Session session = sf.openSession();
         session.beginTransaction();
         session.save(item);
@@ -91,7 +90,7 @@ public class HbmTracker implements Store, AutoCloseable {
     }
 
     @Override
-    public void close() throws Exception {
+    public void close() {
         StandardServiceRegistryBuilder.destroy(registry);
     }
 }
