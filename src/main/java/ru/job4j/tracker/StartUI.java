@@ -34,7 +34,8 @@ public class StartUI {
     public static void main(String[] args) throws SQLException {
         Output output = new ConsoleOutput();
         Input input = new ValidateInput(new ConsoleInput(), output);
-        HbmTracker tracker = new HbmTracker();
+        try (SqlTracker tracker = new SqlTracker()) {
+            tracker.init();
             List<UserAction> actions = List.of(
                     new CreateAction(output),
                     new CreateManyAction(output),
@@ -46,5 +47,8 @@ public class StartUI {
                     new FindByNameAction(output),
                     new ExitAction(output));
             new StartUI(output).init(input, tracker, actions);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

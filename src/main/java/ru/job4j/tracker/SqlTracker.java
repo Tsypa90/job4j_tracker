@@ -110,6 +110,18 @@ public class SqlTracker implements Store, AutoCloseable {
         return items;
     }
 
+    public void findAllByReact(Observe<Item> observe) {
+        try (PreparedStatement statement = cn.prepareStatement("select * from items")) {
+            try (ResultSet resultSet = statement.executeQuery()) {
+                while (resultSet.next()) {
+                    observe.receive(newItem(resultSet));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public List<Item> findByName(String key) {
         List<Item> items = new ArrayList<>();
